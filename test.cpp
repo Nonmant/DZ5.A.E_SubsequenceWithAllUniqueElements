@@ -71,3 +71,27 @@ TEST_CASE("1 tree", ""){
             "1 1"
     );
 }
+
+TEST_CASE("right has priority", ""){
+    std::stringstream input(
+            "6 3\n"
+            "1 2 2 2 3 1"
+    );
+    std::stringstream output;
+    parseFile(input,output);
+    REQUIRE(output.str() ==
+            "4 6"
+    );
+}
+
+TEST_CASE("smallest in the middle", ""){
+    std::stringstream input(
+            "18 3\n"
+            "1 2 2 3 2 2 2 1 2 3 2 2 2 1 2 2 3"
+    );
+    std::stringstream output;
+    parseFile(input,output);
+    REQUIRE(output.str() ==
+            "9 11"
+    );
+}
