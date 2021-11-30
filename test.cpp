@@ -92,6 +92,6 @@ TEST_CASE("smallest in the middle", ""){
     std::stringstream output;
     parseFile(input,output);
     REQUIRE(output.str() ==
-            "9 11"
+            "8 10"
     );
 }
